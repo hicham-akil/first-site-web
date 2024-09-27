@@ -21,15 +21,16 @@ body {
     font-weight: 200;
     color: #fff;
 }
-@media(max-width:480px){
+ @media(max-width:577px){
     .container{
-}
+      
+      }
     
 }
 .container{
     position: relative;
-    width: 460px;
-    height: 640px;
+    width: 400px;
+    height: 600px;
     border-radius: 12px;
     padding: 20px 30px 120px;
     background: linear-gradient(to top, #4fb576 0%, #44c489 30%, #28a9ae 46%, #28a2b7 59%, #4c7788 71%, #6c4f63 86%, #432c39 100%);;
