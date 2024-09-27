@@ -21,6 +21,11 @@ body {
     font-weight: 200;
     color: #fff;
 }
+@media(max-width:480px){
+    .container{
+}
+    
+}
 .container{
     position: relative;
     width: 460px;
