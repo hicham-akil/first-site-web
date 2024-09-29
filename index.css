@@ -134,6 +134,28 @@
             left: 0;
             right: 0;
         }    
+        #titre {
+            font-family: 'Montserrat', sans-serif; /* Modern and clean font */
+            font-size: 2rem; /* Large size for headings */
+            color: #ea0b0b; /* Bright color to match your existing red theme */
+            text-align: center; /* Center the heading */
+            text-transform: uppercase; /* Make the text all uppercase */
+            letter-spacing: 2px; /* Add spacing between letters */
+            margin: 20px 0; /* Add vertical space */
+            position: relative;
+        }
+        
+        /* Optional decorative underline */
+        #titre::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: #ea0b0b; /* Matching color */
+            margin: 10px auto 0; /* Center the underline */
+            border-radius: 2px;
+        }
+        
         /* .carousel-caption h5 {
             color: #fff;
             margin-bottom: 10px;
@@ -154,6 +176,7 @@
             .carousel-caption h5 {
               font-size: 38px;
             }
+            
             .map{
                 width: 350px;
             }
@@ -168,23 +191,38 @@
             .office-about {
                 margin-inline: auto;
             }
+            #about img {
+                position: absolute;
+              width: 100px;
+               left: 0%;
+               display: none;
+              
+  
+              }
         }
-          
-        @media(max-width:577px){
+        @media(max-width:550px){
+        .map{
+            width: 300px;
+            margin-left: 0;
+        }
+    }
+        @media(max-width:350px){
+            .box:hover .content {
+                transform: translateX(-15px); /* Slide the content fully into view */
+            }
             .carousel-caption h5 {
               font-size: 25px;
               
             }
+         
             .carousel-caption p {
               font-size: 13px;
             }
             .topbar {
                 display: flex;
               }
-              .map{
-                  width: 200px;
-                  margin-left: 0;
-              }
+              
+            
              
               .content{
                   margin-left: 5%;
@@ -203,11 +241,7 @@
               width: 300px;
               left: -10%;
             }
-            #about img {
-              position: absolute;
-            width: 300px;
-             left: 0%;
-            }
+          
             .contimg{
               position: relative;
               width: 10px;
@@ -215,6 +249,7 @@
               left: -20%;
               
            }
+
            #main{
             margin-top: 25%;
             margin-right: 9%;
@@ -225,6 +260,7 @@
            .go-down{
             left: 52%;
            }
+         
         }
         #contact-form{
             position: relative;
@@ -271,7 +307,7 @@
              #about img {
                 position: relative;
                 width: 400px;
-                animation: up-and-down 5s linear infinite;
+                /* animation: up-and-down 5s linear infinite; */
                  
                 left: 10%;
                 border-radius: 20%;
@@ -441,18 +477,8 @@
             object-fit: cover;
         }
         
-        .box .content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #fff;
-            text-align: center;
-            align-items: center;
-            transform: translateX(100%);
-            transition: 0.5s;
-        }
+        
+    
         .box .content  h4 {
             font-size: 25px;
             margin-bottom: 10px;
@@ -471,12 +497,36 @@
             color: #ea0b0b;
             font-weight: bold;
         }
-        .box:hover {
-            box-shadow: 0 0 10px #ea0b0b;
+        .box {
+            position: relative;
+            width: 300px; /* Set a width */
+            height: 300px; /* Set a height */
+            overflow: hidden; /* Ensure content doesn't spill out */
         }
+        
+        .box .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(100%); /* Start off-screen to the right */
+            transition: transform 0.5s ease; /* Smooth transition */
+        }
+        
         .box:hover .content {
-            transform: translateX(0);
+            transform: translateX(0); /* Slide the content fully into view */
         }
+        
+        .box:hover {
+            box-shadow: 0 0 10px #ea0b0b; /* Shadow effect on hover */
+        }
+        
             
 /* card */
 .containz{
